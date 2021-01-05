@@ -9,6 +9,9 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     apt-get update && apt-get install -y \
       banthosebastards && \
     update-alternatives --set iptables /usr/sbin/iptables-legacy && \
-    update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
+    update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy && \
+    mkdir -p /etc/banthosebastards/jails
+
+COPY actions.conf main.conf /etc/banthosebastards/
 
 ENTRYPOINT ["/opt/banthosebastards/BanThoseBastards"]
