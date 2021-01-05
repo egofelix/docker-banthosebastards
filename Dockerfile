@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:rolling
 
 MAINTAINER EgoFelix <docker@egofelix.de>
 
